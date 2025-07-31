@@ -1,0 +1,33 @@
+@mixin font($font-name, $sub-name, $file-name) {
+  font-family: $font-name;
+  src: url('@/assets/fonts/#{$font-name}/#{$sub-name}/ttf/#{$file-name}.ttf') format('truetype'),
+    url('@/assets/fonts/#{$font-name}/#{$sub-name}/woff2/#{$file-name}.woff2') format('woff2'),
+    url('@/assets/fonts/#{$font-name}/#{$sub-name}/woff/#{$file-name}.otf') format('otf');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+$fonts: (
+  0: ('Genshin-Impact', 'Deshret-Inscription', 'DeshretInscription-Regular'),
+  // 1: ('Genshin-Impact', 'Deshret-InscriptionFont-Ainee', 'FontAinee-Regular'),
+  // 2: ('Genshin-Impact', 'Inazuma-Brush', 'InazumaBrush-Regular'),
+  // 3: ('Genshin-Impact', 'Khaenriah-Sun', 'KhaenriahSun-Regular'),
+  4: ('Zenless-Zone-Zero', 'ZZZ-A', 'ZZZA-Regular'),
+  5: ('Zenless-Zone-Zero', 'ZZZ-System', 'ZZZSystem-Regular'),
+);
+
+// @font-face {
+//   @include font('ZZZA', 'Zenless-Zone-Zero', 'ZZZ-A', 'ZZZA-Regular');
+// }
+
+// @font-face {
+//   @include font('ZZZSystem', 'Zenless-Zone-Zero', 'ZZZ-System', 'ZZZSystem-Regular');
+// }
+@each $index, $font-data in $fonts {
+  @font-face {
+    @include font($font-data...);
+  }
+}
+
+
