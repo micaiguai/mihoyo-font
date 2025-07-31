@@ -2,7 +2,7 @@
   <div class="flex flex-col">
     <div class="flex justify-end mb-2">
       <Button class="" @click="copy">
-        <div v-if="copyStatus === 'none'" class="i-material-symbols:content-copy-outline-rounded"></div>
+        <div v-if="copyStatus === 'none'" class="i-material-symbols:content-copy-outline-rounded text-lg"></div>
         <div v-else-if="copyStatus === 'success'" class="i-material-symbols:check"></div>
         <div v-else class="i-material-symbols:close"></div>
       </Button>

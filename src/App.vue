@@ -38,7 +38,7 @@ watch(model, () => {
 </script>
 
 <template>
-  <div class="p-2 h-screen w-screen flex flex-col text-black/80">
+  <div class="p-2 h-dvh w-dvw flex flex-col text-black/80">
     <Switch v-model="model" class="mb-2" :options="options"></Switch>
     <div class="flex-grow-1 flex gap-2 items-center">
       <Textarea 
