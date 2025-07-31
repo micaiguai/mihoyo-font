@@ -19,7 +19,7 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import Button from '../Button/Button.vue';
-import Textarea from '../Textarea/Textarea.vue';
+// import Textarea from '../Textarea/Textarea.vue';
 
 const input = defineModel<string>()
 
